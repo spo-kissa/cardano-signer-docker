@@ -14,5 +14,5 @@ echo Docker‚ğ’â~‚µ‚Ü‚·...
 docker stop spokissa-signer
 
 echo DockerImage‚ğíœ‚µ‚Ü‚·...
-docker image rm signer:1.0
+docker image rm --force signer:1.0
 
