@@ -3,10 +3,10 @@
 echo
 echo
 echo "payment.xskとaddr.addrをshareディレクトリにコピーして"
-echo ""
+echo
 
 echo
-echo "Scavenger Mine の 署名キーを入力してください。"
+echo "署名キーを入力してください。"
 echo
 read -r -p "> " KEY
 
