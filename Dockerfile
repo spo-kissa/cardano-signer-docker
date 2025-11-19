@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM debian:bookworm-slim
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -12,7 +12,7 @@ RUN <<'EOF'
 set -eux
 
 apt-get update
-apt-get install -y gpg curl wget tmux vim jq bash
+apt-get install -y wget jq
 
 case "${TARGETARCH:-}" in
   amd64) CS_ARCH="x64" ;;
@@ -28,7 +28,6 @@ install -m 0755 ./cardano-signer /usr/local/bin/cardano-signer
 rm -rf $HOME/git
 echo Cardano-Signer Installed!
 cardano-signer --version
-sleep 5
 
 
 EOF
